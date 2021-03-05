@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		30151EC225EDA38D00B0F045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30151EC025EDA38D00B0F045 /* Main.storyboard */; };
 		30151EC425EDA3AB00B0F045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30151EC325EDA3AB00B0F045 /* Assets.xcassets */; };
 		30151EC725EDA3AB00B0F045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30151EC525EDA3AB00B0F045 /* LaunchScreen.storyboard */; };
+		30151ED125EDBE0200B0F045 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 30151ED025EDBE0200B0F045 /* Alamofire */; };
+		30151ED425EDBE4800B0F045 /* APIFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30151ED325EDBE4800B0F045 /* APIFunction.swift */; };
+		30151EDC25EE134A00B0F045 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30151EDB25EE134900B0F045 /* AddNoteViewController.swift */; };
+		30151EDF25EE2B5D00B0F045 /* notePrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30151EDE25EE2B5D00B0F045 /* notePrototypeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		30151EC325EDA3AB00B0F045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30151EC625EDA3AB00B0F045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30151EC825EDA3AB00B0F045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30151ED325EDBE4800B0F045 /* APIFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunction.swift; sourceTree = "<group>"; };
+		30151EDB25EE134900B0F045 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		30151EDE25EE2B5D00B0F045 /* notePrototypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notePrototypeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30151ED125EDBE0200B0F045 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,9 @@
 				30151EC325EDA3AB00B0F045 /* Assets.xcassets */,
 				30151EC525EDA3AB00B0F045 /* LaunchScreen.storyboard */,
 				30151EC825EDA3AB00B0F045 /* Info.plist */,
+				30151ED325EDBE4800B0F045 /* APIFunction.swift */,
+				30151EDB25EE134900B0F045 /* AddNoteViewController.swift */,
+				30151EDE25EE2B5D00B0F045 /* notePrototypeCell.swift */,
 			);
 			path = NoteApp;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = NoteApp;
+			packageProductDependencies = (
+				30151ED025EDBE0200B0F045 /* Alamofire */,
+			);
 			productName = NoteApp;
 			productReference = 30151EB725EDA38D00B0F045 /* NoteApp.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 30151EAE25EDA38C00B0F045;
+			packageReferences = (
+				30151ECF25EDBE0100B0F045 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 30151EB825EDA38D00B0F045 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30151EDF25EE2B5D00B0F045 /* notePrototypeCell.swift in Sources */,
+				30151ED425EDBE4800B0F045 /* APIFunction.swift in Sources */,
 				30151EBF25EDA38D00B0F045 /* ViewController.swift in Sources */,
 				30151EBB25EDA38D00B0F045 /* AppDelegate.swift in Sources */,
+				30151EDC25EE134A00B0F045 /* AddNoteViewController.swift in Sources */,
 				30151EBD25EDA38D00B0F045 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30151ECF25EDBE0100B0F045 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30151ED025EDBE0200B0F045 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30151ECF25EDBE0100B0F045 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30151EAF25EDA38C00B0F045 /* Project object */;
 }
